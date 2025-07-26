@@ -4,6 +4,7 @@ return {
     projects = { -- define project roots
       "~/Documents/waltily*",
       "~/Documents/kkday*",
+      "~/.config/nvim/",
     },
     picker = {
       type = "telescope", -- one of "telescope", "fzf-lua", or "snacks"
@@ -12,9 +13,8 @@ return {
   keys = {
     { 
       "<leader>p",
-      function()
-      end,
-      desc = "Toggle testing summary",
+      "<cmd>NeovimProjectDiscover<cr>",
+      desc = "Discover projects",
     },
   },
   init = function()
