@@ -2,9 +2,6 @@ return {
   "catppuccin/nvim",
   name = "catppuccin", 
   proority = 1000,
-  config = function()
-    vim.o.termguicolors = true
-  end,
   integrations = {
     coc_nvim = true,
     neotree = true,
