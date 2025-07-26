@@ -9,6 +9,8 @@ return {
     barbar = true,
     dap = true,
     dap_ui = true,
+    treesitter = true,
+    treesitter_context = true,
     indent_blankline = {
       enabled = true,
       scope_color = "lavender", -- catppuccin color (eg. `lavender`) Default: text
