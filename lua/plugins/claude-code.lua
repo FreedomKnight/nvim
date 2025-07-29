@@ -5,7 +5,7 @@ return {
     config = true,
     keys = {
       { "<leader>c", nil, desc = "AI/Claude Code" },
-      { "<leader>cc", "<cmd>ClaudeCode --continue<cr>", desc = "Toggle Claude" },
+      { "<leader>cc", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
       { "<leader>cf", "<cmd>ClaudeCodeFocus<cr>", desc = "Focus Claude" },
       { "<leader>cR", "<cmd>ClaudeCode --resume<cr>", desc = "Resume Claude" },
       { "<leader>cC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue Claude" },
