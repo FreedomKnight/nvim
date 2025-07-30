@@ -3,6 +3,13 @@ return {
   branch = "master",
   build = "npm ci",
   config = function()
+    -- Set Node.js path to use nvm default
+    local node_utils = require('utils.node')
+    local node_path = node_utils.get_node_path()
+    if node_path then
+      vim.g.coc_node_path = node_path
+    end
+    
     -- Some servers have issues with backup files, see #649
     vim.opt.backup = false
     vim.opt.writebackup = false
@@ -95,8 +102,8 @@ return {
     -- Apply codeAction to the selected region
     -- Example: `<leader>aap` for current paragraph
     local opts = {silent = true, nowait = true}
-    keyset("x", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
-    keyset("n", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
+    -- keyset("x", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
+    -- keyset("n", "<leader>a", "<Plug>(coc-codeaction-selected)", opts)
 
     -- Remap keys for apply code actions at the cursor position.
     keyset("n", "<leader>ac", "<Plug>(coc-codeaction-cursor)", opts)

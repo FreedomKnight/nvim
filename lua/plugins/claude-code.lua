@@ -2,7 +2,7 @@ return {
   {
     "coder/claudecode.nvim",
     dependencies = { "folke/snacks.nvim" },
-    config = true,
+    enable = false,
     keys = {
       { "<leader>c", nil, desc = "AI/Claude Code" },
       { "<leader>cc", "<cmd>ClaudeCode<cr>", desc = "Toggle Claude" },
@@ -24,7 +24,7 @@ return {
   },
   {
     "greggh/claude-code.nvim",
-    enabled = false,
+    enabled = true,
     dependencies = {
       "nvim-lua/plenary.nvim", -- Required for git operations
     },
@@ -37,7 +37,7 @@ return {
         window = {
           position = 'vertical'
         },
-        command = 'nvm use default && claude'
+        command = 'claude'
       }
     end
   }
